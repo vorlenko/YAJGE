@@ -34,12 +34,12 @@ public class Level1State extends GameState{
 
     @Override
     public void init() {
-        //TODO 
+        
     }
 
     @Override
     public void update() {
-        //TODO 
+        
     }
 
     @Override
@@ -59,17 +59,17 @@ public class Level1State extends GameState{
 
     @Override
     public void keyPressed(int k) {
-        //TODO 
+        
     }
 
     @Override
     public void keyReleased(int k) {
-        //TODO 
+        
     }
 
     @Override
     public void keyTyped(int k) {
-        //TODO 
+        
     }
     
 }

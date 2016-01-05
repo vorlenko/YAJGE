@@ -9,6 +9,8 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
+import yajge.framework.entity.Sprite;
 import yajge.framework.gamestate.GameState;
 import yajge.framework.gamestate.GameStateManager;
 import yajge.framework.utils.TextUtility;
@@ -21,6 +23,7 @@ public class MenuState extends GameState {
 
     private String[] options;
     private int currentChoice = 0;
+    Sprite background;
 
     private Color titleColor;
     private Font titleFont;
@@ -46,6 +49,11 @@ public class MenuState extends GameState {
             "Space Shooter",
             "Quit"
         };
+        //TODO: Solve problem with sending width and height via gsm.attributes;
+        background = new Sprite(400 / 2,
+                300 / 2,
+                (BufferedImage) gsm.getAttribute("Background1"));
+        background.debug = false;
     }
 
     @Override
@@ -55,10 +63,12 @@ public class MenuState extends GameState {
 
     @Override
     public void draw(Graphics2D g) {
-        g.setColor(Color.BLACK);
+        //Draw Background
+        background.draw(g);
+        /*g.setColor(Color.BLACK);
         g.fillRect(0, 0,
-                (int) gsm.getAttribute("WIDTH"),
-                (int) gsm.getAttribute("HEIGHT"));
+        (int) gsm.getAttribute("WIDTH"),
+        (int) gsm.getAttribute("HEIGHT"));*/
         // draw title
         g.setColor(titleColor);
         g.setFont(titleFont);

@@ -12,11 +12,17 @@ import yajge.framework.windows.GamePanel;
  *
  * @author bob
  */
-public class SpaceshooterPanel extends GamePanel{
+public class SpaceshooterPanel extends GamePanel {
 
     @Override
     protected void initGSM() {
         gsm = new SSStateManager();
+        gsm.setAttribute("WIDTH", WIDTH);
+        gsm.setAttribute("HEIGHT", HEIGHT);
+        gsm.setAttribute("CAMERA_X1", 0);
+        gsm.setAttribute("CAMERA_Y1", 0);
+        gsm.setAttribute("WORLD_X1", 0);
+        gsm.setAttribute("WORLD_Y1", 0);
     }
 
     @Override
@@ -24,9 +30,7 @@ public class SpaceshooterPanel extends GamePanel{
         WIDTH = 400;
         HEIGHT = 300;
         SCALE = 2;
-        
+
     }
-    
-    
-    
+
 }

@@ -48,7 +48,7 @@ public class MenuState extends GameState {
 
     @Override
     public void update() {
-        //TODO 
+        
     }
 
     @Override
@@ -100,12 +100,12 @@ public class MenuState extends GameState {
 
     @Override
     public void keyReleased(int k) {
-        //TODO 
+        
     }
 
     @Override
     public void keyTyped(int k) {
-        //TODO 
+        
     }
 
     private void select() {

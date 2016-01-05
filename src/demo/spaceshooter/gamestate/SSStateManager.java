@@ -28,12 +28,16 @@ public class SSStateManager extends GameStateManager {
                 this.removeAttribute("Background1");
                 this.removeAttribute("CRAFT_IMG");
                 this.removeAttribute("MISSILE_IMG");
+                this.setAttribute("Background1",
+                        ResourceLoader.loadSprite(SSGameState.class,
+                                "/res/background/starfield1.png",
+                                true));
                 hmGameState.put(state, new demo.spaceshooter.gamestate.MenuState(this));
                 break;
             case GAME_STATE1:
                 this.setAttribute("Background1",
                         ResourceLoader.loadSprite(SSGameState.class,
-                                "/res/background/starfield.jpg",
+                                "/res/background/starfield1.png",
                                 true));
                 this.setAttribute("CRAFT_IMG",
                         ResourceLoader.loadSprite(SSGameState.class,
